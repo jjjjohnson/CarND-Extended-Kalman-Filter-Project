@@ -23,6 +23,8 @@ public:
   // measurement covariance matrix
   Eigen::MatrixXd R_;
 
+
+    const double PI = std::atan(1.0)*4;
   /**
    * Constructor
    */
@@ -63,6 +65,10 @@ public:
    * @param z The measurement at k+1
    */
   void UpdateEKF(const Eigen::VectorXd &z);
+
+
+    void Update_routine(const Eigen::VectorXd &y);
+
 
 };
 
